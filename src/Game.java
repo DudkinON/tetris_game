@@ -11,7 +11,10 @@ class Game extends JFrame {
     private static Figure figure = new Figure();
     private static boolean gameOver = false;
 
-
+    /**
+     * Return bool value game over
+     * @return boolean
+     */
     public static boolean isGameOver() {
         return gameOver;
     }
