@@ -12,4 +12,8 @@ class Game extends JFrame {
     private static boolean gameOver = false;
 
 
+    public static boolean isGameOver() {
+        return gameOver;
+    }
+
 }
