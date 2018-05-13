@@ -163,6 +163,9 @@ class Game extends JFrame {
         }
     }
 
+    /**
+     * Check score and update level
+     */
     private void updateLevel() {
         if (gameScore >= 200000) level = 10;
         else if (gameScore >= 100000) level = 9;
