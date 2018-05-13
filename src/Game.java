@@ -29,6 +29,9 @@ class Game extends JFrame {
         return figure;
     }
 
+    /**
+     * Constructor of Game class. Create a window and set it
+     */
     Game() {
 
         // Get block size
