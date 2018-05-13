@@ -6,6 +6,11 @@ import java.awt.*;
  */
 class Canvas extends JPanel {
 
+    /**
+     * Override method paint of JPanel class
+     *
+     * @param g: Is an object graphics for render
+     */
     @Override
     public void paint(Graphics g) {
         super.paint(g);
