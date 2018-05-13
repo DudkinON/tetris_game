@@ -5,5 +5,12 @@ import java.awt.*;
  */
 class Block {
 
+    private int x, y;
 
+    // Create constructor
+    Block(int x, int y) {
+        setX(x);
+        setY(y);
+    }
+    
 }
