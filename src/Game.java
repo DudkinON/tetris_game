@@ -85,6 +85,9 @@ class Game extends JFrame {
         Arrays.fill(canv[GameSettings.FIELD_HEIGHT], 1);
     }
 
+    /**
+     * Runner of the game
+     */
     void run() {
         while (!gameOver) {
             try {
