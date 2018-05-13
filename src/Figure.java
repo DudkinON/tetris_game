@@ -35,4 +35,10 @@ class Figure {
         createFromShape();
     }
 
+    private void createFromShape() {
+        for (int x = 0; x < size; x++)
+            for (int y = 0; y < size; y++)
+                if (shape[y][x] == 1) figure.add(new Block(x + this.x, y + this.y));
+    }
+
 }
