@@ -54,6 +54,11 @@ class Figure {
         return false;
     }
 
+    /**
+     * Checks the figure is on the floor
+     *
+     * @return Boolean
+     */
     boolean isOn() {
         for (Block block : figure) if (Game.canv[block.getY()][block.getX()] > 0) return true;
         return false;
