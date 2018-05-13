@@ -70,7 +70,13 @@ class Figure {
     void leaveOn() {
         for (Block block : figure) Game.canv[block.getY()][block.getX()] = color;
     }
-    
+
+    /**
+     * Checks the figure has touched edge of window
+     *
+     * @param direction: Direction an integer positive (right), negative (left)
+     * @return Boolean
+     */
     private boolean isTouchWall(int direction) {
         for (Block block : figure) {
             if (direction == GameSettings.KEY_LEFT &&
