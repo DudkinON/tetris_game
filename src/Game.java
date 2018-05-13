@@ -122,6 +122,9 @@ class Game extends JFrame {
         }
     }
 
+    /**
+     * Check rows for the filling if row/rows is full remove row/rows and increase the score
+     */
     private void checkRows() {
 
         // Amount of rows
