@@ -64,6 +64,9 @@ class Figure {
         return false;
     }
 
+    /**
+     * Adds to the array index color
+     */
     void leaveOn() {
         for (Block block : figure) Game.canv[block.getY()][block.getX()] = color;
     }
