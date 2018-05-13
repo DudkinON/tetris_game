@@ -20,4 +20,9 @@ class Game extends JFrame {
     static boolean isGameOver() {
         return gameOver;
     }
+
+    static Figure getFigure() {
+        return figure;
+    }
+
 }
