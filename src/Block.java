@@ -12,5 +12,23 @@ class Block {
         setX(x);
         setY(y);
     }
+
+    // Setters
+    void setX(int x) {
+        this.x = x;
+    }
+
+    void setY(int y) {
+        this.y = y;
+    }
+
+    // Getters
+    int getX() {
+        return x;
+    }
+
+    int getY() {
+        return y;
+    }
     
 }
