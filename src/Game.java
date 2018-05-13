@@ -162,4 +162,17 @@ class Game extends JFrame {
             setTitle(GameSettings.TITLE);
         }
     }
+
+    private void updateLevel() {
+        if (gameScore >= 200000) level = 10;
+        else if (gameScore >= 100000) level = 9;
+        else if (gameScore >= 60000) level = 8;
+        else if (gameScore >= 30000) level = 7;
+        else if (gameScore >= 15000) level = 6;
+        else if (gameScore >= 8000) level = 5;
+        else if (gameScore >= 4000) level = 4;
+        else if (gameScore >= 2000) level = 3;
+        else if (gameScore >= 1000) level = 2;
+        else if (gameScore >= 500) level = 1;
+    }
 }
