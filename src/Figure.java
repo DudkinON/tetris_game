@@ -54,4 +54,9 @@ class Figure {
         return false;
     }
 
+    boolean isOn() {
+        for (Block block : figure) if (Game.canv[block.getY()][block.getX()] > 0) return true;
+        return false;
+    }
+
 }
