@@ -29,4 +29,57 @@ class Game extends JFrame {
         return figure;
     }
 
+    Game() {
+
+        // Get block size
+        int bSize = GameSettings.BLOCK_SIZE;
+
+        // Set title of game
+        setTitle(GameSettings.TITLE);
+
+        // Set default close button and action
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        // Configure the window
+        setBounds(
+                GameSettings.WINDOW_X,
+                GameSettings.WINDOW_Y,
+                GameSettings.FIELD_WIDTH * bSize + GameSettings.FIELD_X,
+                GameSettings.FIELD_HEIGHT * bSize + GameSettings.FIELD_Y);
+
+        // Turn off resizable of window
+        setResizable(false);
+
+        // Set background color
+        canvas.setBackground(Color.white);
+
+        // Add keyboard listener
+        addKeyListener(new KeyAdapter() {
+            /**
+             * Create a listener of keyboard
+             * @param e: Key event
+             */
+            public void keyPressed(KeyEvent e) {
+                if (!gameOver) {
+                    if (e.getKeyCode() == GameSettings.KEY_DOWN) figure.drop();
+                    if (e.getKeyCode() == GameSettings.KEY_UP) figure.rotate();
+                    if (e.getKeyCode() == GameSettings.KEY_LEFT || e.getKeyCode() == GameSettings.KEY_RIGHT) {
+                        figure.move(e.getKeyCode());
+                    }
+                }
+                canvas.repaint();
+            }
+        });
+
+        // Add canvas
+        add(BorderLayout.CENTER, canvas);
+
+
+        // Turn on visible
+        setVisible(true);
+
+        // Add border of canvas
+        Arrays.fill(canv[GameSettings.FIELD_HEIGHT], 1);
+    }
+
 }
