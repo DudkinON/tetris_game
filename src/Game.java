@@ -122,4 +122,41 @@ class Game extends JFrame {
         }
     }
 
+    private void checkRows() {
+
+        // Amount of rows
+        int row = GameSettings.FIELD_HEIGHT - 1;
+
+        // Amount of removed rows - once
+        int countFillRows = 0;
+
+        while (row > 0) {
+
+            int filled = 1;
+
+            for (int col = 0; col < GameSettings.FIELD_WIDTH; col++) filled *= Integer.signum(canv[row][col]);
+
+            if (filled > 0) {
+
+                countFillRows++;
+
+                // Update amount of rows deleted
+                rows++;
+                for (int i = row; i > 0; i--) {
+                    // If line is full remove it
+                    System.arraycopy(canv[i - 1], 0, canv[i], 0, GameSettings.FIELD_WIDTH);
+                }
+            } else {
+                row--;
+            }
+        }
+        if (countFillRows > 0) {
+
+            // Increase the score
+            gameScore += GameSettings.SCORE[countFillRows - 1];
+
+            // Display new score
+            setTitle(GameSettings.TITLE);
+        }
+    }
 }
