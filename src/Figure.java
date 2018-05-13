@@ -44,4 +44,9 @@ class Figure {
                 if (shape[y][x] == 1) figure.add(new Block(x + this.x, y + this.y));
     }
 
+    boolean isTouch() {
+        for (Block block : figure) if (Game.canv[block.getY() + 1][block.getX()] > 0) return true;
+        return false;
+    }
+
 }
