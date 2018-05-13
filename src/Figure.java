@@ -70,5 +70,16 @@ class Figure {
     void leaveOn() {
         for (Block block : figure) Game.canv[block.getY()][block.getX()] = color;
     }
+    
+    private boolean isTouchWall(int direction) {
+        for (Block block : figure) {
+            if (direction == GameSettings.KEY_LEFT &&
+                    (block.getX() == 0 || Game.canv[block.getY()][block.getX() - 1] > 0)) return true;
+            if (direction == GameSettings.KEY_RIGHT &&
+                    (block.getX() == GameSettings.FIELD_WIDTH - 1 || Game.canv[block.getY()][block.getX() + 1] > 0))
+                return true;
+        }
+        return false;
+    }
 
 }
