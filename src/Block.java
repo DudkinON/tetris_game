@@ -30,5 +30,18 @@ class Block {
     int getY() {
         return y;
     }
-    
+
+    void paint(Graphics g, int color) {
+
+        // Set color
+        g.setColor(new Color(color));
+
+        // Define block size and radius
+        int bSize = GameSettings.BLOCK_SIZE;
+        int radius = GameSettings.RADIUS;
+
+        // Render
+        g.fillRoundRect(x * bSize + 1, y * bSize + 1, bSize - 2, bSize - 2, radius, radius);
+
+    }
 }
