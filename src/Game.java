@@ -15,6 +15,7 @@ class Game extends JFrame {
 
     /**
      * Return bool value game over
+     *
      * @return boolean
      */
     static boolean isGameOver() {
@@ -23,6 +24,7 @@ class Game extends JFrame {
 
     /**
      * Return figure
+     *
      * @return object
      */
     static Figure getFigure() {
@@ -76,7 +78,6 @@ class Game extends JFrame {
 
         // Add canvas
         add(BorderLayout.CENTER, canvas);
-
 
         // Turn on visible
         setVisible(true);
