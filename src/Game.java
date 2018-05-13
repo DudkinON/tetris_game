@@ -21,6 +21,10 @@ class Game extends JFrame {
         return gameOver;
     }
 
+    /**
+     * Return figure
+     * @return object
+     */
     static Figure getFigure() {
         return figure;
     }
