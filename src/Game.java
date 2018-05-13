@@ -85,4 +85,38 @@ class Game extends JFrame {
         Arrays.fill(canv[GameSettings.FIELD_HEIGHT], 1);
     }
 
+    void run() {
+        while (!gameOver) {
+            try {
+                Thread.sleep(GameSettings.SPEED - (level * 100));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            canvas.repaint();
+
+            // Check rows
+            checkRows();
+
+            // Update level
+            updateLevel();
+
+            if (figure.isTouch()) {
+
+                // Leave figure on the flore
+                figure.leaveOn();
+
+                // Create a figure
+                figure = new Figure();
+
+                // Check that figure is fit
+                gameOver = figure.isOn();
+            } else {
+
+                // Move the figure down
+                figure.moveDown();
+            }
+        }
+    }
+
 }
