@@ -31,6 +31,12 @@ class Block {
         return y;
     }
 
+    /**
+     * Render a block for a figure
+     *
+     * @param g:     Object
+     * @param color: Object
+     */
     void paint(Graphics g, int color) {
 
         // Set color
