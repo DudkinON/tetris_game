@@ -116,4 +116,15 @@ class Figure {
         while (!isTouch()) moveDown();
     }
 
+    private boolean isWrongPosition() {
+        for (int x = 0; x < size; x++)
+            for (int y = 0; y < size; y++)
+                if (shape[y][x] == 1) {
+                    if (y + this.y < 0) return true;
+                    if (x + this.x < 0 || x + this.x > GameSettings.FIELD_WIDTH - 1) return true;
+                    if (Game.canv[y + this.y][x + this.x] > 0) return true;
+                }
+        return false;
+    }
+
 }
