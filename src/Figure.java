@@ -132,6 +132,11 @@ class Figure {
         return false;
     }
 
+    /**
+     * Rotate the figure to direction
+     *
+     * @param direction: An integer (key code)
+     */
     private void rotateShape(int direction) {
 
         for (int i = 0; i < size / 2; i++) {
