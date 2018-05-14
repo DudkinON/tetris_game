@@ -175,4 +175,7 @@ class Figure {
             rotateShape(GameSettings.KEY_LEFT);
     }
 
+    void paint(Graphics g) {
+        for (Block block : figure) block.paint(g, color);
+    }
 }
