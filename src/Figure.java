@@ -163,4 +163,13 @@ class Figure {
         }
     }
 
+    void rotate() {
+        rotateShape(GameSettings.KEY_RIGHT);
+        if (!isWrongPosition()) {
+            figure.clear();
+            createFromShape();
+        } else
+            rotateShape(GameSettings.KEY_LEFT);
+    }
+
 }
