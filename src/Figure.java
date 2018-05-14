@@ -88,6 +88,11 @@ class Figure {
         return false;
     }
 
+    /**
+     * Moves the figure by x on the left or on the right
+     *
+     * @param direction: An integer positive is right negative is left direction
+     */
     void move(int direction) {
         if (!isTouchWall(direction)) {
             int dx = direction - 38;
