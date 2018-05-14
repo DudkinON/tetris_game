@@ -108,7 +108,10 @@ class Figure {
         for (Block block : figure) block.setY(block.getY() + 1);
         y++;
     }
-    
+
+    /**
+     * Drop the figure on the floor
+     */
     void drop() {
         while (!isTouch()) moveDown();
     }
