@@ -132,4 +132,30 @@ class Figure {
         return false;
     }
 
+    private void rotateShape(int direction) {
+
+        for (int i = 0; i < size / 2; i++) {
+            for (int j = i; j < size - 1 - i; j++) {
+
+                if (direction == GameSettings.KEY_RIGHT) {
+
+                    // Render the figure clockwise
+                    int tmp = shape[size - 1 - j][i];
+                    shape[size - 1 - j][i] = shape[size - 1 - i][size - 1 - j];
+                    shape[size - 1 - i][size - 1 - j] = shape[j][size - 1 - i];
+                    shape[j][size - 1 - i] = shape[i][j];
+                    shape[i][j] = tmp;
+                } else {
+
+                    // Render the figure counterclockwise
+                    int tmp = shape[i][j];
+                    shape[i][j] = shape[j][size - 1 - i];
+                    shape[j][size - 1 - i] = shape[size - 1 - i][size - 1 - j];
+                    shape[size - 1 - i][size - 1 - j] = shape[size - 1 - j][i];
+                    shape[size - 1 - j][i] = tmp;
+                }
+            }
+        }
+    }
+
 }
