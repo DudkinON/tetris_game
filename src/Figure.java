@@ -101,6 +101,9 @@ class Figure {
         }
     }
 
+    /**
+     * Moves the figure down
+     */
     void moveDown() {
         for (Block block : figure) block.setY(block.getY() + 1);
         y++;
