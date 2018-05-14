@@ -88,4 +88,12 @@ class Figure {
         return false;
     }
 
+    void move(int direction) {
+        if (!isTouchWall(direction)) {
+            int dx = direction - 38;
+            for (Block block : figure) block.setX(block.getX() + dx);
+            x += dx;
+        }
+    }
+
 }
