@@ -163,6 +163,9 @@ class Figure {
         }
     }
 
+    /**
+     * Rotate figure
+     */
     void rotate() {
         rotateShape(GameSettings.KEY_RIGHT);
         if (!isWrongPosition()) {
