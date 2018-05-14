@@ -175,6 +175,11 @@ class Figure {
             rotateShape(GameSettings.KEY_LEFT);
     }
 
+    /**
+     * Render a block
+     *
+     * @param g: The graphics object
+     */
     void paint(Graphics g) {
         for (Block block : figure) block.paint(g, color);
     }
